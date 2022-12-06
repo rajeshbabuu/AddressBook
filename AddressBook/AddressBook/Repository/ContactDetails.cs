@@ -27,6 +27,25 @@ namespace AddressBook.Repository
                 Console.WriteLine("User does not exist.");
             }
         }
+        // DElete the key
+
+        public void delete_Person(string contactDetails)
+        {
+            bool temp = contactDetailDictionary.ContainsKey(contactDetails);
+            if (temp)
+            {
+                contactDetailDictionary.Remove(contactDetails);
+                Console.WriteLine("User Deleted successfully .");
+
+            }
+            else
+            {
+                Console.WriteLine("User does not exist.");
+
+            }
+
+        }
+
         public void DisplayContact()
         {
             foreach (var item in contactDetailDictionary)

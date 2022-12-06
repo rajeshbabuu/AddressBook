@@ -20,7 +20,9 @@ namespace AddressBook
                 Console.WriteLine("Enter 1 for Add person Details ");
                 Console.WriteLine("Enter 2 for displaying person details");
                 Console.WriteLine("Enter 3 for Editing person details");
-                Console.WriteLine("Enter 4 for Exit");
+                Console.WriteLine("Enter 4 for Delete person details : ");
+                Console.WriteLine("Enter 5 for Exit : ");
+
 
                 int userInput = int.Parse(Console.ReadLine());
 
@@ -56,7 +58,12 @@ namespace AddressBook
                             zip = int.Parse(zip),
                         };
                         contactDetailsRepo.Edit_Person_Details(person1);
-
+                        break;
+                    case 4:
+                        Console.WriteLine("Please Enter person  Details which you want to delete : ");
+                        Console.Write("Enter tha First name : ");
+                        string first_Name2 = Console.ReadLine();
+                        contactDetailsRepo.delete_Person(first_Name2);
                         break;
                     default:
                         Console.WriteLine("Exiting the loop .");
