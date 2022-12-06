@@ -19,7 +19,8 @@ namespace AddressBook
             {
                 Console.WriteLine("Enter 1 for Add person Details ");
                 Console.WriteLine("Enter 2 for displaying person details");
-                Console.WriteLine("Enter 3 for Exit");
+                Console.WriteLine("Enter 3 for Editing person details");
+                Console.WriteLine("Enter 4 for Exit");
 
                 int userInput = int.Parse(Console.ReadLine());
 
@@ -54,11 +55,8 @@ namespace AddressBook
                             State = state,
                             zip = int.Parse(zip),
                         };
-                        contactDetailsRepo.AddPersonDetails(person1);
+                        contactDetailsRepo.Edit_Person_Details(person1);
 
-                        break;
-                    case 2:
-                        contactDetailsRepo.DisplayContact();
                         break;
                     default:
                         Console.WriteLine("Exiting the loop .");
